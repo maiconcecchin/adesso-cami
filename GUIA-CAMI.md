@@ -9,7 +9,7 @@ Código do projeto (aberto, é dele que o instalador baixa tudo): https://github
 ## O que você precisa
 
 - Uma VPS **Ubuntu 24.04** na Hostinger (KVM 2 ou maior). O ideal é uma VPS só para a Cami. Ela pode dividir a VPS com outros projetos que usem o nginx, mas não com projetos que usem o Caddy ou o Traefik nas portas 80 e 443 (como o n8n dos outros guias): o instalador confere isso e para antes de mexer em qualquer coisa.
-- Um **domínio ou subdomínio** para a Cami, por exemplo `janete.seudominio.com.br`.
+- Um **domínio ou subdomínio** para a Cami, por exemplo `cami.seudominio.com.br`.
 - Uma chave de inteligência artificial (OpenAI, Anthropic, OpenRouter ou Groq) e um WhatsApp para conectar. A voz em áudio (ElevenLabs) é opcional.
 
 ## 1. Apontar o domínio
@@ -18,7 +18,7 @@ No painel do seu domínio, crie um registro:
 
 | Tipo | Nome | Aponta para |
 |---|---|---|
-| A | `janete` (ou o subdomínio que você escolheu) | o IP da sua VPS |
+| A | `cami` (ou o subdomínio que você escolheu) | o IP da sua VPS |
 
 O IP aparece no painel da VPS na Hostinger. A propagação costuma levar poucos minutos.
 
@@ -38,7 +38,7 @@ Ele pergunta duas coisas:
 Depois disso não precisa fazer nada. Ele instala o Docker, o Supabase (banco, login e arquivos), o app, o HTTPS e o backup diário. No fim aparece:
 
 ```
-A Adesso Cami está no ar:  https://janete.seudominio.com.br
+A Adesso Cami está no ar:  https://cami.seudominio.com.br
 ```
 
 Se der erro no certificado HTTPS, quase sempre é o domínio que ainda não aponta para a VPS. Confira o passo 1, espere alguns minutos e rode o mesmo comando de novo.

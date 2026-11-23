@@ -14,12 +14,12 @@ Este arquivo é para você anexar no seu agente de IA. Ele conduz a instalação
 | VS Code | https://marketplace.visualstudio.com/items?itemName=hostinger-official.hostinger-connector | Install |
 | Cursor, Windsurf, Antigravity | https://open-vsx.org/extension/hostinger/hostinger-connector | Install |
 
-2. **Tenha em mãos:** o subdomínio que vai usar (ex.: `janete.seudominio.com.br`) e um e-mail seu. A chave da IA da Cami, o WhatsApp e a voz você só vai usar no fim, direto nas telas do app.
+2. **Tenha em mãos:** o subdomínio que vai usar (ex.: `cami.seudominio.com.br`) e um e-mail seu. A chave da IA da Cami, o WhatsApp e a voz você só vai usar no fim, direto nas telas do app.
 3. **Abra uma conversa nova, anexe este arquivo e mande o pedido abaixo**, trocando o que está entre colchetes.
 
 ### Pedido para mandar junto com o arquivo
 
-> Siga o arquivo anexo para instalar a Adesso Cami na minha VPS Hostinger usando o Hostinger Connector. Meu subdomínio é [janete.seudominio.com.br] e meu e-mail para o certificado é [voce@email.com]. Liste minhas VPS e espere eu escolher. Faça um passo por vez, me diga o resultado esperado e espere eu confirmar antes de seguir. Não compre, não contrate, não reinstale a VPS e não apague nada que já existe nela. Senhas, chaves de IA e o QR code do WhatsApp eu coloco direto nas telas: não me peça no chat.
+> Siga o arquivo anexo para instalar a Adesso Cami na minha VPS Hostinger usando o Hostinger Connector. Meu subdomínio é [cami.seudominio.com.br] e meu e-mail para o certificado é [voce@email.com]. Liste minhas VPS e espere eu escolher. Faça um passo por vez, me diga o resultado esperado e espere eu confirmar antes de seguir. Não compre, não contrate, não reinstale a VPS e não apague nada que já existe nela. Senhas, chaves de IA e o QR code do WhatsApp eu coloco direto nas telas: não me peça no chat.
 
 O agente faz a parte da conta Hostinger (VPS e DNS) e te entrega os comandos. Você cola no **Terminal da VPS** (Web Console: painel da Hostinger, abra a VPS, botão **Terminal**) e devolve o que apareceu. No fim, você faz as telas do app com ele te guiando.
 
@@ -105,7 +105,7 @@ Crie **sem apagar nem alterar** nenhum registro que já existe (site, e-mail, ve
 Confira no Web Console (tem que aparecer o IP da VPS):
 
 ```bash
-getent ahostsv4 janete.seudominio.com.br | head -1
+getent ahostsv4 cami.seudominio.com.br | head -1
 ```
 
 Troque pelo subdomínio real. Se não aparecer nada, espere 2 minutos e confira de novo.
@@ -116,7 +116,7 @@ Monte o comando com o subdomínio e o e-mail da pessoa e entregue:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/maiconcecchin/adesso-cami/main/instalacao/instalar.sh -o /root/instalar-janete.sh
-JANETE_DOMINIO=janete.seudominio.com.br JANETE_EMAIL=voce@email.com bash /root/instalar-janete.sh
+JANETE_DOMINIO=cami.seudominio.com.br JANETE_EMAIL=voce@email.com bash /root/instalar-janete.sh
 ```
 
 Avise antes:
@@ -136,7 +136,7 @@ Entregue este bloco (troque o subdomínio):
 
 ```bash
 docker ps --format '{{.Names}} {{.Status}}' | grep -E 'janete|supabase'
-curl -s -o /dev/null -w "site: %{http_code}\n" https://janete.seudominio.com.br/entrar
+curl -s -o /dev/null -w "site: %{http_code}\n" https://cami.seudominio.com.br/entrar
 ```
 
 Esperado: `janete-app` e os `supabase-*` como `Up`, e `site: 200`. Se você tiver como abrir páginas da web, confira também que o endereço abre com HTTPS.

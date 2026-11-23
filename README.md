@@ -22,7 +22,7 @@ Tudo roda na **sua própria VPS**: o app, o banco de dados e os arquivos. Você 
 Para fazer sozinho, você precisa de:
 
 1. Uma VPS **Ubuntu 24.04** (na Hostinger, a KVM 2 ou maior).
-2. Um **domínio ou subdomínio** apontando para o IP da VPS (registro A), por exemplo `janete.seudominio.com.br`.
+2. Um **domínio ou subdomínio** apontando para o IP da VPS (registro A), por exemplo `cami.seudominio.com.br`.
 
 Abra o **Web Console** da VPS no painel da Hostinger e cole:
 

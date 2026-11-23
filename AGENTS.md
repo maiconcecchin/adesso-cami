@@ -18,7 +18,7 @@ Repositório: https://github.com/maiconcecchin/adesso-cami
 4. A VPS é KVM 2 ou maior.
 
 Conferir as portas: `ss -ltnp | grep -E ':(80|443) '`
-Conferir o domínio: `dig +short janete.seudominio.com.br` (tem que devolver o IP da VPS).
+Conferir o domínio: `dig +short cami.seudominio.com.br` (tem que devolver o IP da VPS).
 
 ## Instalar
 
@@ -34,7 +34,7 @@ Para rodar sem perguntas (quando você executa o comando pela pessoa, sem teclad
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/maiconcecchin/adesso-cami/main/instalacao/instalar.sh -o /root/instalar-janete.sh
-JANETE_DOMINIO=janete.seudominio.com.br JANETE_EMAIL=voce@email.com bash /root/instalar-janete.sh
+JANETE_DOMINIO=cami.seudominio.com.br JANETE_EMAIL=voce@email.com bash /root/instalar-janete.sh
 ```
 
 **Atualizar** é rodar o mesmo comando de novo: ele reaproveita o domínio e o e-mail, mantém os dados e as chaves e troca só o app.
