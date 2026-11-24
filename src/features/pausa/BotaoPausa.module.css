@@ -1,0 +1,69 @@
+/* Interruptor de pausa da Cami (topo da plataforma). Cores da marca Adesso. */
+.ligada,
+.pausada,
+.estadoLigada,
+.estadoPausada {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font: 600 13px/1 var(--ap-fonte);
+  white-space: nowrap;
+  border: 1px solid var(--ap-linha-forte);
+  background: var(--ap-branco);
+  color: var(--ap-tinta);
+}
+
+.ligada,
+.pausada {
+  cursor: pointer;
+}
+
+.ligada:disabled,
+.pausada:disabled {
+  cursor: progress;
+  opacity: 0.7;
+}
+
+.ligada:focus-visible,
+.pausada:focus-visible {
+  outline: none;
+  box-shadow: var(--ap-anel);
+}
+
+.ponto {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ap-sucesso, #1a8a5a);
+}
+
+/* Pausada: coral cheio, bem visível. Texto preto sobre coral (6,3:1). */
+.pausada,
+.estadoPausada {
+  background: var(--aipro-orange);
+  border-color: var(--aipro-orange);
+  color: var(--aipro-carbon);
+}
+
+.pausada .ponto,
+.estadoPausada .ponto {
+  background: var(--aipro-carbon);
+}
+
+.erro {
+  margin-left: 6px;
+  font-weight: 500;
+}
+
+@media (max-width: 899px) {
+  .ligada,
+  .pausada,
+  .estadoLigada,
+  .estadoPausada {
+    padding: 0 10px;
+    font-size: 12px;
+  }
+}

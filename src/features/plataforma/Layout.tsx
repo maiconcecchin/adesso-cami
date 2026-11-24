@@ -8,6 +8,7 @@ import { cx, type Classes } from "@/components/base/cx";
 import { iniciais as iniciaisDoNome } from "@/components/base/iniciais";
 import { JaneteSimbolo } from "@/components/janete/JaneteSimbolo";
 import BrandLogo from "@/components/brand/BrandLogo";
+import { BotaoPausa } from "@/features/pausa/BotaoPausa";
 import { ASSISTANT_NAME, PRODUCT_NAME } from "@/lib/brand";
 import { useTema } from "@/lib/tema";
 import {
@@ -1180,6 +1181,7 @@ function Casca({ identidade }: { identidade: IdentidadeCasca }) {
               <b>{areaAtual.nome}</b>
             </p>
             <div className={s.topoDir}>
+              <BotaoPausa />
               {podeReverTour ? (
                 // Abaixo de 1440 px a pílula fica só com o ícone (o texto continua no nome do botão
                 // e na dica `title`), para o topo caber numa linha.

@@ -167,6 +167,7 @@ export type Database = {
           espera_lote_s: number
           id: number
           onboarding_concluido_em: string | null
+          pausada: boolean
           voz_erro: string | null
           voz_id: string | null
           voz_nome: string | null
@@ -180,6 +181,7 @@ export type Database = {
           espera_lote_s?: number
           id?: number
           onboarding_concluido_em?: string | null
+          pausada?: boolean
           voz_erro?: string | null
           voz_id?: string | null
           voz_nome?: string | null
@@ -193,6 +195,7 @@ export type Database = {
           espera_lote_s?: number
           id?: number
           onboarding_concluido_em?: string | null
+          pausada?: boolean
           voz_erro?: string | null
           voz_id?: string | null
           voz_nome?: string | null

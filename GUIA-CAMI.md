@@ -71,6 +71,7 @@ Se preferir usar este guia mesmo, anexe e mande:
 | Para | Faça |
 |---|---|
 | Atualizar a Cami | rode o mesmo comando de instalação de novo (seus dados ficam) |
+| Pausar a Cami | botão **Cami ligada · Pausar** no topo do app (só o admin). Pausada, ela não responde nem gasta IA; as mensagens continuam chegando no Chat. O que chegar durante a pausa não é respondido sozinho depois |
 | Ver os erros do app | `docker logs --tail 50 janete-app` |
 | Reiniciar o app | `docker restart janete-app` |
 | Desinstalar a Cami | `bash /opt/janete/desinstalar.sh` |
